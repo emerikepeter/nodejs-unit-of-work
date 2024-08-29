@@ -52,7 +52,7 @@ The `ExecuteUnitOfWorks` function simplifies the execution of work within a unit
 **Usage**:
 ```typescript
 async function exampleUsage() {
-    const result = await ExecuteUnitOfWorks<SomeInteractorSet, SomeResultType>(
+    const result = await ExecuteUnitOfWorks(
         { /* interactors */ },
         async (unitOfWork) => {
             return await unitOfWork.Interactor.SomeMethod(unitOfWork.getSession(), someModel);
